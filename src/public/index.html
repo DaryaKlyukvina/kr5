@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аналоговые часы - Express API</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🕐 Аналоговые часы </h1>
+        
+        <div class="clock-container">
+            <canvas id="analogClock" width="300" height="300"></canvas>
+        </div>
+        
+        <div class="time-display">
+            <p id="digitalTime">--:--:--</p>
+            <p id="serverTime">Серверное время: --</p>
+        </div>
+        
+        <div class="controls">
+            <button onclick="fetchTime()">Получить время с сервера</button>
+            <button onclick="fetchTimezone('MSK')">Время в Москве (MSK)</button>
+            <button onclick="fetchTimezone('EST')">Время в Нью-Йорке (EST)</button>
+            <button onclick="fetchAnalogData()">Данные для часов</button>
+        </div>
+        
+        <div class="api-info">
+            <h3>Доступные API endpoints:</h3>
+            <ul>
+                <li><code>GET /api/clock/time</code> - текущее время</li>
+                <li><code>GET /api/clock/timezone?zone=MSK</code> - время в зоне</li>
+                <li><code>GET /api/clock/analog</code> - данные для аналоговых часов</li>
+            </ul>
+            <div id="apiOutput"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

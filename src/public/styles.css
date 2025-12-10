@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    margin-bottom: 2rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.clock-container {
+    margin: 2rem auto;
+    width: 300px;
+    height: 300px;
+}
+
+canvas {
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    border: 10px solid #333;
+}
+
+.time-display {
+    margin: 2rem 0;
+}
+
+#digitalTime {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#serverTime {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.controls {
+    margin: 2rem 0;
+}
+
+button {
+    background: white;
+    color: #667eea;
+    border: none;
+    padding: 12px 24px;
+    margin: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.api-info {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.api-info h3 {
+    margin-top: 0;
+    color: white;
+}
+
+.api-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.api-info li {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+}
+
+.response {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 1rem;
+    overflow-x: auto;
+}
+
+.response pre {
+    margin: 0;
+    color: #fff;
+    font-size: 0.9rem;
+}
